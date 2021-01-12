@@ -3,7 +3,7 @@ from django.urls import resolve
 from django.http import HttpRequest
 from lists.views import home_page
 # Create your tests here.
-
+# Unit tests are about testing logic, flow control and configuration
 class HomePageTest(TestCase):
 
     def test_root_url_resolves_to_home_page_view(self):
