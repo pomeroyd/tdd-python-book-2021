@@ -1,6 +1,9 @@
 # Welcome to the tdd-python-book-2021 repository
 https://read.amazon.co.uk/?asin=B074HXXXLS
 
+useful Links
+`https://docs.github.com/en/free-pro-team@latest/github/using-git/changing-a-remotes-url`
+
 This is the second round of working on this book.
 Have a great 2021
 
