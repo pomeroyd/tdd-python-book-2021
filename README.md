@@ -24,4 +24,24 @@ Sunday 17th January at 14:21 on page 70
 with branches
 `coverage run --source='.' --branch manage.py test`
 
+setup .coveragerc file.
+
 `coverage report -m --omit */dataEngine-env/*` 
+
+`coverage report -m`
+
+`coverage html`
+
+## Tests
+
+`python manage.py test` 
+
+This runs both the unit tests and the functional_tests.
+
+`python manage.py test lists`
+
+This runs only the unit tests
+
+`python manage.py test functional_tests`
+
+This runs only the functional tests
