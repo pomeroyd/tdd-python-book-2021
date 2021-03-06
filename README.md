@@ -15,3 +15,13 @@ Finished work of about half an hour on
 Sunday 17th January at 14:21 on page 70
 
 
+
+## Running Test Code Coverage
+`pip install coverage`
+
+`coverage run --source='.' manage.py test`
+
+with branches
+`coverage run --source='.' --branch manage.py test`
+
+`coverage report -m --omit */dataEngine-env/*` 
