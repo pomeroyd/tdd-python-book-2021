@@ -2,12 +2,28 @@ from django.test import TestCase
 from django.urls import resolve
 from django.http import HttpRequest
 from django.template.loader import render_to_string
+from unittest.mock import patch
 
-from lists.views import home_page
+
+from lists.views import home_page, new_list2
+
 
 from lists.models import Item
 # Create your tests here.
 # Unit tests are about testing logic, flow control and configuration
+
+@patch('lists.views.NewListForm')
+class NewListViewUnitTest(unittest.TestCase):
+
+    def setUp(self):
+        self.request = HttpRequest()
+        self.request.POST['text'] = 'new list item'
+
+    def test_passes_POST_data_to_NewListForm(self, mockNewListForm):
+        new_list2(self.request)
+        MockNewListForm.assert_called_once_with(data=self.request.POST)
+
+
 class HomePageTest(TestCase):
 
     def test_home_page_returns_correct_html(self):

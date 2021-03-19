@@ -14,3 +14,6 @@ def home_page(request):
         new_item_text = ''
     items = Item.objects.all()
     return render(request, 'home.html',{'items': items})
+
+def new_list2(request):
+    pass
